@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "47d9863d83d96bbc99658c9badbce629",
+    "hash": "c0ddc57fec69c7cec5abbc1c00f25dc7",
     "packages": [
         {
             "name": "adammbalogh/key-value-store",
@@ -150,7 +150,7 @@
     "prefer-stable": false,
     "platform": {
         "php": ">=5.4.0",
-        "ext-memcached": "*"
+        "ext-memcached": ">=2.0.0"
     },
     "platform-dev": [
 

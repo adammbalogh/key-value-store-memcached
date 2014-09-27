@@ -14,8 +14,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "adammbalogh/key-value-store": "~0.2",
-        "ext-memcached": "*"
+        "adammbalogh/key-value-store": "~0.3",
+        "ext-memcached": ">=2.0.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~1.5"
