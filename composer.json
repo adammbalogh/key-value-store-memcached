@@ -1,0 +1,29 @@
+{
+    "name": "adammbalogh/key-value-store-memcached",
+    "description": "Key-value memcached store through the memcached extension.",
+    "keywords": ["key", "value", "key-value", "store", "nosql", "memcache", "memcached", "key-value-memcached"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adam Balogh",
+            "email": "baloghbh@gmail.com",
+            "homepage": "http://code-chronicle.blogspot.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "adammbalogh/key-value-store": "~0.2",
+        "ext-memcached": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdammBalogh\\KeyValueStore\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}
