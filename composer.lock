@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c0ddc57fec69c7cec5abbc1c00f25dc7",
+    "hash": "431d5721418bab648ad33c1eeb057477",
     "packages": [
         {
             "name": "adammbalogh/key-value-store",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adammbalogh/key-value-store.git",
-                "reference": "4c2160baabac90763deb554d108282d3dbb02ee7"
+                "reference": "716fd53f706c64a5ef89ff0695628d9407e625da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adammbalogh/key-value-store/zipball/4c2160baabac90763deb554d108282d3dbb02ee7",
-                "reference": "4c2160baabac90763deb554d108282d3dbb02ee7",
+                "url": "https://api.github.com/repos/adammbalogh/key-value-store/zipball/716fd53f706c64a5ef89ff0695628d9407e625da",
+                "reference": "716fd53f706c64a5ef89ff0695628d9407e625da",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,7 @@
                 "store",
                 "value"
             ],
-            "time": "2014-09-27 12:23:50"
+            "time": "2014-09-29 16:59:36"
         }
     ],
     "packages-dev": [
