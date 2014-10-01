@@ -1,5 +1,6 @@
-# Key-Value Memcached Store by [@adammbalogh](http://twitter.com/adammbalogh)
+# Key-Value Memcached Store
 
+[![Author](http://img.shields.io/badge/author-@adammbalogh-blue.svg?style=flat)](https://twitter.com/adammbalogh)
 [![Build Status](https://img.shields.io/travis/adammbalogh/key-value-store-memcached/master.svg?style=flat)](https://travis-ci.org/adammbalogh/key-value-store-memcached)
 [![Quality Score](https://img.shields.io/scrutinizer/g/adammbalogh/key-value-store-memcached.svg?style=flat)](https://scrutinizer-ci.com/g/adammbalogh/key-value-store-memcached)
 [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
