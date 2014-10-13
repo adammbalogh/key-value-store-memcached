@@ -1,6 +1,6 @@
 <?php namespace AdammBalogh\KeyValueStore\Adapter\MemcachedAdapter;
 
-use AdammBalogh\KeyValueStore\Adapter\Helper;
+use AdammBalogh\KeyValueStore\Adapter\Util;
 use AdammBalogh\KeyValueStore\Exception\KeyNotFoundException;
 
 /**
@@ -25,10 +25,10 @@ trait StringTrait
         $getResult = $this->getValue($key);
         $unserialized = @unserialize($getResult);
 
-        if (Helper::hasInternalExpireTime($unserialized)) {
+        if (Util::hasInternalExpireTime($unserialized)) {
             $this->set(
                 $key,
-                Helper::getDataWithExpire(
+                Util::getDataWithExpire(
                     $unserialized['v'] . $value,
                     $unserialized['s'],
                     $unserialized['ts']
@@ -83,7 +83,7 @@ trait StringTrait
         $getResult = $this->getValue($key);
         $unserialized = @unserialize($getResult);
 
-        if (Helper::hasInternalExpireTime($unserialized)) {
+        if (Util::hasInternalExpireTime($unserialized)) {
             $getResult = $unserialized['v'];
         }
 
@@ -130,12 +130,12 @@ trait StringTrait
         $getResult = $this->getValue($key);
         $unserialized = @unserialize($getResult);
 
-        if (Helper::hasInternalExpireTime($unserialized)) {
+        if (Util::hasInternalExpireTime($unserialized)) {
 
-            Helper::checkInteger($unserialized['v']);
+            Util::checkInteger($unserialized['v']);
             $this->set(
                 $key,
-                Helper::getDataWithExpire(
+                Util::getDataWithExpire(
                     (int)$unserialized['v'] + $increment,
                     $unserialized['s'],
                     $unserialized['ts']
@@ -145,7 +145,7 @@ trait StringTrait
             return (int)$unserialized['v'] + $increment;
         }
 
-        Helper::checkInteger($getResult);
+        Util::checkInteger($getResult);
         $this->set($key, (int)$getResult + $increment);
 
         return (int)$getResult + $increment;

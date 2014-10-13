@@ -15,6 +15,8 @@ This library provides a layer to a key value memcached store.
 
 It uses the [memcached](http://hu1.php.net/manual/en/book.memcached.php) extension.
 
+Check out the [abstract library](https://github.com/adammbalogh/key-value-store) to see the other adapters and the Api.
+
 # Installation
 
 Install it through composer.
@@ -51,6 +53,20 @@ $kvs->get('sample_key');
 # API
 
 **Please visit the [API](https://github.com/adammbalogh/key-value-store#api) link in the abstract library.**
+
+# Toolset
+
+| Key                 | String              | Server           |
+|------------------   |---------------------|------------------|
+| ✔ delete            | ✔ append            | ✔ flush          |
+| ✔ expire            | ✔ decrement         |                  |
+| ✔ getKeys           | ✔ decrementBy       |                  |
+| ✔ getTtl            | ✔ get               |                  |
+| ✔ has               | ✔ getValueLength    |                  |
+| ✔ persist           | ✔ increment         |                  |
+|                     | ✔ incrementBy       |                  |
+|                     | ✔ set               |                  |
+|                     | ✔ setIfNotExists    |                  |
 
 # Support
 
