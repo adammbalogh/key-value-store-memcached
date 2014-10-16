@@ -61,20 +61,6 @@ class KeyTraitTest extends AbstractKvsMemcachedTestCase
      * @param MemcachedAdapter $dummyMemchdAdapter
      * @param \Memcached $dummyMemchd
      */
-    public function testGetKeys(KeyValueStore $kvs, MemcachedAdapter $dummyMemchdAdapter, \Memcached $dummyMemchd)
-    {
-        $dummyMemchd->shouldReceive('getAllKeys')->andReturn(['a', 'b']);
-
-        $this->assertCount(2, $kvs->getKeys());
-    }
-
-    /**
-     * @dataProvider kvsProvider
-     *
-     * @param KeyValueStore $kvs
-     * @param MemcachedAdapter $dummyMemchdAdapter
-     * @param \Memcached $dummyMemchd
-     */
     public function testGetTtl(KeyValueStore $kvs, MemcachedAdapter $dummyMemchdAdapter, \Memcached $dummyMemchd)
     {
         $dummyMemchd->shouldReceive('get')->with('key-e')->andReturn(Util::getDataWithExpire('value-e', 5, time()));

@@ -2,14 +2,14 @@
 
 use AdammBalogh\KeyValueStore\Adapter\MemcachedAdapter\ClientTrait;
 use AdammBalogh\KeyValueStore\Adapter\MemcachedAdapter\KeyTrait;
+use AdammBalogh\KeyValueStore\Adapter\MemcachedAdapter\ValueTrait;
 use AdammBalogh\KeyValueStore\Adapter\MemcachedAdapter\ServerTrait;
-use AdammBalogh\KeyValueStore\Adapter\MemcachedAdapter\StringTrait;
 
 class MemcachedAdapter extends AbstractAdapter
 {
-    use ClientTrait, KeyTrait, StringTrait, ServerTrait {
+    use ClientTrait, KeyTrait, ValueTrait, ServerTrait {
         ClientTrait::getClient insteadof KeyTrait;
-        ClientTrait::getClient insteadof StringTrait;
+        ClientTrait::getClient insteadof ValueTrait;
         ClientTrait::getClient insteadof ServerTrait;
     }
 
