@@ -133,8 +133,6 @@ class KeyTraitTest extends AbstractKvsMemcachedTestCase
     }
 
     /**
-     * @expectedException \Exception
-     *
      * @dataProvider kvsProvider
      *
      * @param KeyValueStore $kvs
@@ -146,6 +144,6 @@ class KeyTraitTest extends AbstractKvsMemcachedTestCase
         $dummyMemchd->shouldReceive('get')->with('key-e')->andReturn('value-e');
         $dummyMemchd->shouldReceive('getResultCode')->andReturn(\Memcached::RES_SUCCESS);
 
-        $kvs->persist('key-e');
+        $this->assertFalse($kvs->persist('key-e'));
     }
 }

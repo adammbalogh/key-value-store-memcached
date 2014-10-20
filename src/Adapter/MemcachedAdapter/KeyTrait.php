@@ -108,7 +108,7 @@ trait KeyTrait
         $unserialized = @unserialize($getResult);
 
         if (!Util::hasInternalExpireTime($unserialized)) {
-            throw new \Exception("{$key} has no associated timeout");
+            return false;
         }
 
         return $this->getClient()->replace($key, $unserialized['v'], 0);
